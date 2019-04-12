@@ -1,0 +1,13 @@
+<div class="list-movies-container">
+  <h1>All Movies</h1>
+  {{#each movies}}
+    <div>
+      <hr>
+      <p><strong>Title</strong>: {{this.title}}</p>
+      <p><strong>Director</strong>: {{this.director}}</p>
+      <img src="{{this.image}}" alt=""> <br>
+      <a href="/movies/{{this._id}}">See more</a>
+    </div>
+  {{/each}}
+</div>
+

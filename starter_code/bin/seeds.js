@@ -73,9 +73,11 @@ const movies = [
   }
 ];
 
+// We delete all movies first
 Movie.deleteMany()
   .then(() => {
     console.log("All the movies are deleted")
+    // We create the 8 movies
     Movie.create(movies)
       .then(createdMovies => {
         console.log('Nb of created movies =', createdMovies.length)
